@@ -1,0 +1,59 @@
+---
+## Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v2.0.1
+_src_path: gh:kc-workspace/asdf-plugin-template.git
+addon_yaml:
+    archive: true
+    checksum: true
+    download: true
+    fetch: true
+    git: false
+    github: true
+    gpg: false
+    help: true
+    install: true
+    package: false
+    python: false
+    system: true
+    tags: true
+    version: false
+app_desc: a portable command-line YAML, JSON, XML, CSV, TOML and properties processor
+app_name: yq
+app_repo: https://github.com/mikefarah/yq
+app_type: standalone
+app_website: https://mikefarah.gitbook.io/yq/
+archive_enabled: false
+checksum_conf_algorithm: 512
+checksum_enabled: true
+checksum_url: https://github.com/mikefarah/yq/releases/download/v{version}/checksums
+custom_arch_enabled: true
+custom_arch_yaml:
+    aarch64*: arm64
+    armv5*: arm
+    armv6*: arm
+    armv7*: arm
+    i386: '386'
+    i686: '386'
+    powerpc64le: ppc64le
+    ppc64le: ppc64le
+    x86: '386'
+    x86_64: amd64
+custom_bin_paths: bin
+custom_non_stable_version: (-src|-dev|-latest|-stm|[-\.]rc|-alpha|-beta|[-\.]pre|-next|snapshot|master)
+custom_os_enabled: false
+custom_require_commands: ''
+download_url: https://github.com/mikefarah/yq/releases/download/v{version}/yq_{os}_{arch}
+gpg_enabled: false
+install_map_enabled: true
+install_map_method: move
+install_map_yaml:
+    yq: bin/yq
+package_enabled: false
+plugin_author: Kamontat Chantrachirathumrong
+plugin_name: asdf-yq
+plugin_org: kc-workspace
+plugin_repo: https://github.com/kc-workspace/asdf-yq.git
+source_enabled: false
+test_cmd_args: --version
+version_file_enabled: false
+version_prefix: v
