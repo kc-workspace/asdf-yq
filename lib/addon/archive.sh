@@ -4,7 +4,7 @@
 ## usage: `kc_asdf_archive_extract /tmp/file.tar.gz /tmp/file [internal/path]`
 kc_asdf_archive_extract() {
   local ns="extract.archive"
-  local input="$1" output="$2" internal="$3" tmppath
+  local input="$1" output="$2" internal="${3:-}" tmppath
   local ext="${input##*.}"
 
   if [ -n "$internal" ]; then
@@ -20,7 +20,7 @@ kc_asdf_archive_extract() {
     kc_asdf_exec tar -xzf \
       "$input" \
       -C "$tmppath" \
-      --strip-components "0" ||
+      --strip-components "" ||
       return 1
   fi
 

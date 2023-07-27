@@ -17,7 +17,7 @@ kc_asdf_get_os() {
 
   if command -v _kc_asdf_custom_os >/dev/null; then
     local tmp="$os"
-    os="$(_kc_asdf_custom_os "$os")"
+    os="$(_kc_asdf_custom_os "$tmp")"
     kc_asdf_debug "$ns" "developer has custom OS name from %s to %s" "$tmp" "$os"
   fi
 
@@ -59,13 +59,13 @@ kc_asdf_get_arch() {
     arch="arm64"
     ;;
   armv5*)
-    arch="arm"
+    arch="armv5"
     ;;
   armv6*)
-    arch="arm"
+    arch="armv6"
     ;;
   armv7*)
-    arch="arm"
+    arch="armv7"
     ;;
   i386)
     arch="386"
@@ -89,7 +89,7 @@ kc_asdf_get_arch() {
 
   if command -v _kc_asdf_custom_arch >/dev/null; then
     local tmp="$arch"
-    arch="$(_kc_asdf_custom_arch "$arch")"
+    arch="$(_kc_asdf_custom_arch "$tmp")"
     kc_asdf_debug "$ns" "developer has custom ARCH name from %s to %s" "$tmp" "$arch"
   fi
 

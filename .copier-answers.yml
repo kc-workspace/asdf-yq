@@ -1,6 +1,6 @@
 ---
 ## Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v2.0.2
+_commit: v2.1.1
 _src_path: gh:kc-workspace/asdf-plugin-template.git
 addon_yaml:
     archive: true
@@ -26,21 +26,8 @@ archive_enabled: false
 checksum_conf_algorithm: 512
 checksum_enabled: true
 checksum_url: https://github.com/mikefarah/yq/releases/download/v{version}/checksums
-custom_arch_enabled: true
-custom_arch_yaml:
-    aarch64*: arm64
-    armv5*: arm
-    armv6*: arm
-    armv7*: arm
-    i386: '386'
-    i686: '386'
-    powerpc64le: ppc64le
-    ppc64le: ppc64le
-    x86: '386'
-    x86_64: amd64
 custom_bin_paths: bin
 custom_non_stable_version: (-src|-dev|-latest|-stm|[-\.]rc|-alpha|-beta|[-\.]pre|-next|snapshot|master)
-custom_os_enabled: false
 custom_require_commands: ''
 download_url: https://github.com/mikefarah/yq/releases/download/v{version}/yq_{os}_{arch}
 gpg_enabled: false
@@ -54,6 +41,20 @@ plugin_name: asdf-yq
 plugin_org: kc-workspace
 plugin_repo: https://github.com/kc-workspace/asdf-yq.git
 source_enabled: false
+sys_arch_enabled: true
+sys_arch_yaml:
+    aarch64*: arm64
+    armv5*: armv5
+    armv6*: armv6
+    armv7*: armv7
+    i386: '386'
+    i686: '386'
+    powerpc64le: ppc64le
+    ppc64le: ppc64le
+    x86: '386'
+    x86_64: amd64
+sys_ext_enabled: false
+sys_os_enabled: false
 test_cmd_args: --version
 version_file_enabled: false
 version_prefix: v

@@ -25,8 +25,9 @@ __asdf_bin() {
   local tmpdir tmpfile tmppath
   tmpdir="$(kc_asdf_temp_dir)"
   local vars=("version=$version")
-  [ -n "${KC_ASDF_OS:-}" ] && vars+=("os=${KC_ASDF_OS:-}")
-  [ -n "${KC_ASDF_ARCH:-}" ] && vars+=("arch=${KC_ASDF_ARCH:-}")
+  [ -n "${KC_ASDF_OS:-}" ] && vars+=("os=$KC_ASDF_OS")
+  [ -n "${KC_ASDF_ARCH:-}" ] && vars+=("arch=$KC_ASDF_ARCH")
+  [ -n "${KC_ASDF_EXT:-}" ] && vars+=("ext=$KC_ASDF_EXT")
   if command -v kc_asdf_version_parser >/dev/null; then
     local major minor patch
     read -r major minor patch <<<"$(kc_asdf_version_parser "$version")"
