@@ -2,13 +2,17 @@
 
 ## Get download mode based on input filename
 ## usage: `kc_asdf_download_mode 'test.tar.gz'`
-## output: git|file|archive|package
+## output: git|file|archive|package|custom
 kc_asdf_download_mode() {
   local ns="download-mode.addon"
   local filename="$1"
   local mode="file"
-  echo "$filename" | grep -qiE "\.git$" &&
+
+  if [ -z "$filename" ]; then
+    mode="custom"
+  elif echo "$filename" | grep -qiE "\.git$"; then
     mode="git"
+  fi
 
   kc_asdf_debug "$ns" "download mode of %s is %s" \
     "$filename" "$mode"
