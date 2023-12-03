@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/kc-workspace/asdf-yq/compare/v1.0.0...v1.0.1) (2023-12-03)
+
+
+### Improvements
+
+* update plugin from template [autocommit] ([ae58efd](https://github.com/kc-workspace/asdf-yq/commit/ae58efd1c8d66b2336fc4d0a829549ae0f620536))
+
 ## 1.0.0 (2023-11-06)
 
 
